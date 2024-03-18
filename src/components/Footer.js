@@ -10,10 +10,10 @@ export const Footer = () => {
               to="/"
               className="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse"
             >
-              <img src={Logo} className="h-8" alt="movielia" />
+              <img src={Logo} className="h-8" alt="dESS_movie" />
 
               <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
-                Movielia
+                dESS_movie
               </span>
             </Link>
 
@@ -65,7 +65,7 @@ export const Footer = () => {
           <span className="block text-sm text-gray-500 sm:text-center dark:text-gray-400">
             © 2023{" "}
             <Link href="/" className="hover:underline">
-              movielia™
+              dESS_movie™
             </Link>
             . All Rights Reserved.
           </span>

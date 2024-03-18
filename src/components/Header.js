@@ -1,8 +1,13 @@
 import { Link, NavLink, useSearchParams } from "react-router-dom";
 import logo33 from '../assets/images/logo33.png';
 import { useEffect, useState } from "react";
-export const Header = () => {
 
+
+
+
+
+export const Header = () => {
+  
   const [hidden, setHidden] = useState(false); 
   const [darkMode, setDarkMode] = useState(JSON.parse(localStorage.getItem("darkMode") || true));
    
@@ -20,27 +25,23 @@ export const Header = () => {
     const inactiveClass =
       "text-base block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700";
  
- 
-    
-
-   
     return (
       <header>
-        <nav className=" bg-white border-b-2 border-gray-200 dark:bg-gray-900 dark:border-b-1 dark:border-gray-900">
-          <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+        <nav className=" bg-white border-b-2 border-gray-200 px-2 sm:px-4 py-2 dark:bg-gray-900 dark:border-b-1 dark:border-gray-900">
+          <div className="flex flex-wrap justify-between items-center mx-auto">
             <Link
               to="https://t.me/desalegn_sendek/"
               target="_blank"
               className="flex items-center space-x-3 rtl:space-x-reverse"
             >
-              <img src={logo33} className="h-8" alt="movielia logo" />
+              <img src={logo33} className="h-8" alt="dESS_movie logo" />
               <span className="self-center text-4xl font-semibold whitespace-nowrap dark:text-white">
-                Movielia
+                dESS_movie
               </span>
             </Link>
 
             <div id="mobile-nav" className="flex md:order-2">
-            {/* Dark mode toggle button */}
+              {/* Dark mode toggle button */}
               <button
                 onClick={() => setDarkMode(!darkMode)}
                 data-tooltip-target="navbar-search-example-toggle-dark-mode-tooltip"
@@ -79,6 +80,7 @@ export const Header = () => {
 
               {/* this is search button */}
               <button
+                id="navbar-search"
                 onClick={() => setHidden(!hidden)}
                 type="button"
                 data-collapse-toggle="navbar-search"
